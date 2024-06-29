@@ -20,15 +20,12 @@ plugins=(
   thefuck
   helm
   aws
-  zsh-syntax-highlighting
-  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# Enable fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# export FZF_BASE=/usr/local/opt/fzf/install
+# zsh fzf
+source <(fzf --zsh)
 
 ## OSX Specific - Toogle Show/Hide Hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder"
@@ -93,3 +90,7 @@ alias grmd='git rm $(git ls-files --deleted)'
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/russell/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Zsh Syntax Highlighting & Autosuggestions
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh

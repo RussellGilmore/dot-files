@@ -1,4 +1,3 @@
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -17,7 +16,6 @@ ZSH_THEME="agnoster"
 plugins=(
   kubectl
   git
-  docker
   fzf
   thefuck
   helm
@@ -30,11 +28,16 @@ source $ZSH/oh-my-zsh.sh
 
 # Enable fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# export FZF_BASE=/usr/local/opt/fzf/install
 
 ## OSX Specific - Toogle Show/Hide Hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder"
 
+
+# Quick Edits
+alias editrc="vim ~/.zshrc"
+alias makerc="source ~/.zshrc"
 
 # Java Development
 export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
@@ -64,9 +67,7 @@ alias dockerk='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
 # Terraform
 alias tf='terraform'
 alias tfyolo='terraform apply --auto-approve'
-# Deprecated Session Variables
-# export AWS_SDK_LOAD_CONFIG=1
-# export TF_CLI_ARGS_apply="--parallelism=1"
+# Terraform Log Path
 # export TF_LOG=DEBUG
 # export TF_LOG_PATH="~/Documents/logs.txt"
 
@@ -77,8 +78,18 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
+# Useful Stuff
+alias myip="curl ifconfig.me/ip"
+alias rmkh="rm -f ~/.ssh/known_hosts"
+
 # thefuck
 eval $(thefuck --alias)
 
 # Git
 alias grmd='git rm $(git ls-files --deleted)'
+
+[[ -s "/Users/russell/.gvm/scripts/gvm" ]] && source "/Users/russell/.gvm/scripts/gvm"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/russell/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

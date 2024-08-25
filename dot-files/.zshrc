@@ -22,9 +22,8 @@ plugins=(
   aws
 )
 
+eval $(thefuck --alias)
 source $ZSH/oh-my-zsh.sh
-
-# zsh fzf
 source <(fzf --zsh)
 
 ## OSX Specific - Toogle Show/Hide Hidden files in Finder
@@ -37,13 +36,17 @@ alias editrc="vim ~/.zshrc"
 alias makerc="source ~/.zshrc"
 
 # Java Development
-export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
-export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/
-export JAVA_13_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home/
-export JAVA_HOME=$JAVA_11_HOME
-alias java8='export JAVA_HOME=$JAVA_8_HOME; java -version'
-alias java11='export JAVA_HOME=$JAVA_11_HOME; java -version'
-alias java13='export JAVA_HOME=$JAVA_13_HOME; java -version'
+# Deprecated
+# export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
+# export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/
+# export JAVA_13_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home/
+# export JAVA_HOME=$JAVA_11_HOME
+# alias java8='export JAVA_HOME=$JAVA_8_HOME; java -version'
+# alias java11='export JAVA_HOME=$JAVA_11_HOME; java -version'
+# alias java13='export JAVA_HOME=$JAVA_13_HOME; java -version'
+
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
+export JAVA_HOME="/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home"
 
 # Node
 export NVM_DIR="$HOME/.nvm"
@@ -78,9 +81,6 @@ alias lt='ls --tree'
 # Useful Stuff
 alias myip="curl ifconfig.me/ip"
 alias rmkh="rm -f ~/.ssh/known_hosts"
-
-# thefuck
-eval $(thefuck --alias)
 
 # Git
 alias grmd='git rm $(git ls-files --deleted)'

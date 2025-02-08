@@ -1,6 +1,3 @@
-" Unexpected distro issues
-set nocompatible
-
 " Enable syntax highlighting
 if has('syntax')
   syntax on
@@ -11,8 +8,8 @@ if has('mouse')
   set mouse=a
 endif
 
-" Determine the type of a file based on its name 
-" Use this to allow intelligent auto-indenting 
+" Determine the type of a file based on its name
+" Use this to allow intelligent auto-indenting
 if has('filetype')
   filetype indent plugin on
 endif

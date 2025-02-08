@@ -182,3 +182,4 @@ pycharm-ce
 runelite
 thunderbird
 vlc
+zoxide

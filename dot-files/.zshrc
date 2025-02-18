@@ -80,6 +80,7 @@ alias tfyolo='terraform apply --auto-approve'
 # Useful Stuff
 alias myip="curl ifconfig.me/ip"
 alias rmkh="rm -f ~/.ssh/known_hosts"
+alias netshoot="kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot"
 
 # Git
 alias grmd='git rm $(git ls-files --deleted)'

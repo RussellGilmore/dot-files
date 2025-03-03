@@ -1,2 +1,3 @@
 theme ="Builtin Solarized Dark"
 title="Red Space"
+quit-after-last-window-closed=true

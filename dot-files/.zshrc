@@ -106,3 +106,6 @@ export PATH="/Users/russell/.rd/bin:$PATH"
 # Zsh Syntax Highlighting & Autosuggestions
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# ZSH Auto Suggestions Fix
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#586e75"

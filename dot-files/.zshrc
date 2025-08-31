@@ -104,6 +104,10 @@ alias ghost-fonts='ghostty +list-fonts'
 alias ghost-edit='vim ~/.config/ghostty/config'
 alias ghost-source='source ~/.config/ghostty/config'
 
+# C#
+# Add .NET Core SDK tools
+export PATH="$PATH:/Users/russell/.dotnet/tools"
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/russell/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

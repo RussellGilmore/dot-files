@@ -82,6 +82,10 @@ alias dockerk='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
 alias tf='terraform'
 alias tfyolo='terraform apply --auto-approve'
 
+# Terragrunt
+alias tg='terragrunt'
+alias tgyolo='terragrunt apply --auto-approve'
+
 # Useful Stuff
 alias myip="curl ifconfig.me/ip"
 alias rmkh="rm -f ~/.ssh/known_hosts"
